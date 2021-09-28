@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <h1>Calculadora</h1>
+
+    <div class="calculadora">
+
+        <form name="calcform" action="">
+
+            <table>
+                <tr><input type="text" class="visor" id="visor"></tr>
+
+                <tr>
+                    <td><input type="button" class="botao" value="1" onclick="preencher(value)"></td>
+                    <td><input type="button" class="botao" value="2" onclick="preencher(value)"></td>
+                    <td><input type="button" class="botao" value="3" onclick="preencher(value)"></td>
+                    <td><input type="button" class="operador" value="+" onclick="preencher(value)"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="botao" value="4" onclick="preencher(value)"></td>
+                    <td><input type="button" class="botao" value="5" onclick="preencher(value)"></td>
+                    <td><input type="button" class="botao" value="6" onclick="preencher(value)"></td>
+                    <td><input type="button" class="operador" value="-" onclick="preencher(value)"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="botao" value="7" onclick="preencher(value)"></td>
+                    <td><input type="button" class="botao" value="8" onclick="preencher(value)"></td>
+                    <td><input type="button" class="botao" value="9" onclick="preencher(value)"></td>
+                    <td><input type="button" class="operador" value="*" onclick="preencher(value)"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="botao" value="." onclick="preencher(value)"></td>
+                    <td><input type="button" class="botao" value="0" onclick="preencher(value)"></td>
+                    <td><input type="button" class="botao" value="," onclick="preencher(value)"></td>
+                    <td><input type="button" class="operador" value="/" onclick="preencher(value)"></td>
+                </tr>
+
+                <tr>
+                    <td><input type="reset" value="AC" class="ac" onclick="limparCampo()" /></td>
+                    <td colspan="4"> <input class="resultado" value="=" type="button" onclick="calcParse()"></input>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script src="calculadora.js"></script>
+
+    <footer>
+        <p>&copy; CopyrigthZeTolenttino</p>
+    </footer>
+</body>
+
+</html>
