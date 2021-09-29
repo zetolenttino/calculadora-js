@@ -65,6 +65,6 @@ function limparCampo() {
 }
 
 function calcParse() {
-    resultado = eval(valor);
+    resultado = eval(valor.replace(/,/g, '.'));
     document.calcform.visor.value = resultado.toLocaleString('pt-BR');
 }
