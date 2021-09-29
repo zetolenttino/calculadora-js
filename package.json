@@ -1,0 +1,26 @@
+{
+    "name": "calculadora",
+    "version": "1.0.0",
+    "description": "",
+    "main": "calculadora.js",
+    "dependencies": {
+        "express": "^4.17.1"
+    },
+    "devDependencies": {
+        "cypress": "^8.5.0"
+    },
+    "scripts": {
+        "start": "node server.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/zetolenttinopc/calculadora-js.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/zetolenttinopc/calculadora-js/issues"
+    },
+    "homepage": "https://github.com/zetolenttinopc/calculadora-js#readme"
+}
