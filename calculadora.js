@@ -65,6 +65,13 @@ function limparCampo() {
 }
 
 function calcParse() {
-    resultado = eval(valor.replace(/,/g, '.'));
+    const expressao = valor.replace(/,/g, '.') // 1+2
+    const expressaoComReturn = 'return ' + expressao // return 1+2
+    const funcaoQueCalculaAExpressao = new Function([], expressaoComReturn) // ~é como se declarasse a funcao abaixo
+    resultado = funcaoQueCalculaAExpressao();
     document.calcform.visor.value = resultado.toLocaleString('pt-BR');
 }
+
+// function funcaoQueCalculaAExpressao() {
+//     return 1+2   // expressaoComReturn
+// }
