@@ -27,6 +27,6 @@ function calcParse() {
     // const funcaoQueCalculaAExpressao = new Function([], expressaoComReturn) // ~é como se declarasse a funcao abaixo
     // resultado = funcaoQueCalculaAExpressao();
     let resultado
-    if (operador === '+') resultado = parseFloat(parteA) + parseFloat(parteB)
+    if (operador === '+') resultado = parseFloat(parteA.replace(/,/g, '.')) + parseFloat(parteB.replace(/,/g, '.'))
     document.calcform.visor.value = resultado.toLocaleString('pt-BR');
 }
