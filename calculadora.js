@@ -12,13 +12,28 @@ function preencher(texto) {
     } else if (texto === '+') {
         operador = texto
         document.calcform.visor.value = ''
-    } else if (texto === '=') {
+        }else if (texto === '-'){
+           operador = texto
+           document.calcform.visor.value = ''
+        }else if (texto === '/'){
+           operador = texto
+           document.calcform.visor.value = ''
+        }else if (texto === '*'){
+            operador = texto
+            document.calcform.visor.value = ''
+        }
+    else if (texto === '=') {
         calcParse()
+        document.calcform.visor.value = '';
     }
 }
 
 function limparCampo() {
     document.calcform.visor.value = '';
+    delete parteB;
+    delete parteA;
+    delete operador;
+    delete resultado;
 }
 
 function calcParse() {
@@ -27,6 +42,16 @@ function calcParse() {
     // const funcaoQueCalculaAExpressao = new Function([], expressaoComReturn) // ~é como se declarasse a funcao abaixo
     // resultado = funcaoQueCalculaAExpressao();
     let resultado
-    if (operador === '+') resultado = parseFloat(parteA.replace(/,/g, '.')) + parseFloat(parteB.replace(/,/g, '.'))
+    if (operador === '+'){
+        resultado = parseFloat(parteA.replace(/,/g, '.')) + parseFloat(parteB.replace(/,/g, '.'))
+    }else if (operador === '-'){
+        resultado = parseFloat(parteA.replace(/,/g, '.')) - parseFloat(parteB.replace(/,/g, '.'))
+    }else if (operador === '/'){
+        resultado = parseFloat(parteA.replace(/,/g, '.')) / parseFloat(parteB.replace(/,/g, '.'))
+    }else if (operador === '*'){
+        resultado = parseFloat(parteA.replace(/,/g, '.')) * parseFloat(parteB.replace(/,/g, '.'))
+    }
+
     document.calcform.visor.value = resultado.toLocaleString('pt-BR');
+  
 }
