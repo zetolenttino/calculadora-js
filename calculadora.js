@@ -4,54 +4,60 @@ var parteB = undefined
 
 function preencher(texto) {
     if ('0123456789,'.includes(texto)) {
-        const valor = document.calcform.visor.value += texto
+        document.calcform.visor.value += texto // concatena no visor
         if (operador) // operador !== undefined ou null ou 0 ou false ou ''
-            parteB = valor;
+            parteB = document.calcform.visor.value;
         else
-            parteA = valor;
+            parteA = document.calcform.visor.value;
     } else if (texto === '+') {
         operador = texto
+        document.calcform.visor.value = '' <<
+            << << < HEAD
+    } else if (texto === '-') {
+        operador = texto
         document.calcform.visor.value = ''
-        }else if (texto === '-'){
-           operador = texto
-           document.calcform.visor.value = ''
-        }else if (texto === '/'){
-           operador = texto
-           document.calcform.visor.value = ''
-        }else if (texto === '*'){
-            operador = texto
-            document.calcform.visor.value = ''
-        }
-    else if (texto === '=') {
+    } else if (texto === '/') {
+        operador = texto
+        document.calcform.visor.value = ''
+    } else if (texto === '*') {
+        operador = texto
+        document.calcform.visor.value = ''
+    } else if (texto === '=') { ===
+        === =
+    } else if (texto === '-') {
+        operador = texto
+        document.calcform.visor.value = ''
+    } else if (texto === '*') {
+        operador = texto
+        document.calcform.visor.value = ''
+    } else if (texto === '/') {
+        operador = texto
+        document.calcform.visor.value = ''
+    } else if (texto === '=') { >>>
+        >>> > 80 cecbc(implementando AC no teste, e arrumando bugde AC)
         calcParse()
         document.calcform.visor.value = '';
     }
 }
 
 function limparCampo() {
-    document.calcform.visor.value = '';
+    document.calcform.visor.value = ''; <<
+    << << < HEAD
     delete parteB;
     delete parteA;
     delete operador;
-    delete resultado;
+    delete resultado; ===
+    === =
+    parteA = undefined
+    parteB = undefined
+    operador = undefined >>>
+        >>> > 80 cecbc(implementando AC no teste, e arrumando bugde AC)
 }
 
 function calcParse() {
-    // const expressao = parteA.replace(/,/g, '.') + operador + parteB.replace(/,/g, '.')
-    // const expressaoComReturn = 'return ' + expressao // return 1+2
-    // const funcaoQueCalculaAExpressao = new Function([], expressaoComReturn) // ~é como se declarasse a funcao abaixo
-    // resultado = funcaoQueCalculaAExpressao();
     let resultado
-    if (operador === '+'){
+    if (operador === '+' || operador === '-' || operador === '*' || operador === '/') {
         resultado = parseFloat(parteA.replace(/,/g, '.')) + parseFloat(parteB.replace(/,/g, '.'))
-    }else if (operador === '-'){
-        resultado = parseFloat(parteA.replace(/,/g, '.')) - parseFloat(parteB.replace(/,/g, '.'))
-    }else if (operador === '/'){
-        resultado = parseFloat(parteA.replace(/,/g, '.')) / parseFloat(parteB.replace(/,/g, '.'))
-    }else if (operador === '*'){
-        resultado = parseFloat(parteA.replace(/,/g, '.')) * parseFloat(parteB.replace(/,/g, '.'))
     }
-
     document.calcform.visor.value = resultado.toLocaleString('pt-BR');
-  
 }

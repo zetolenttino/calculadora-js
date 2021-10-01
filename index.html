@@ -39,14 +39,14 @@
                     <td><input type="button" class="operador" value="*" id="btnMultiplicacao" onclick="preencher(value)"></td>
                 </tr>
                 <tr>
-                    <td><input type="button" class="botao" value="." onclick="preencher(value)"></td>
-                    <td><input type="button" class="botao" value="0" onclick="preencher(value)"></td>
+                    <td><input type="button" class="botao" value="." id="btnPonto" onclick="preencher(value)"></td>
+                    <td><input type="button" class="botao" value="0" id="btn0" onclick="preencher(value)"></td>
                     <td><input type="button" class="botao" value="," id="btnVirgula" onclick="preencher(value)"></td>
-                    <td><input type="button" class="operador" value="/" onclick="preencher(value)"></td>
+                    <td><input type="button" class="operador" value="/" id="btnDivisor" onclick="preencher(value)"></td>
                 </tr>
 
                 <tr>
-                    <td><input type="reset" value="AC" class="ac" onclick="limparCampo()" /></td>
+                    <td><input type="reset" value="AC" class="ac" id="btnAC" onclick="limparCampo()" /></td>
                     <td colspan="4"> <input class="resultado" value="=" type="button" onclick="calcParse()"></input>
                     </td>
                 </tr>
