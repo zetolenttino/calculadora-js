@@ -1,4 +1,4 @@
-describe.skip('limpar', () => { // lambda ou arrow function
+describe('limpar', () => { // lambda ou arrow function
     it('3+1 AC 14+5', () => {
         cy.visit('http://127.0.0.1:5500/index.html')
         cy.contains('Calculadora')
@@ -78,7 +78,7 @@ describe.skip('limpar', () => { // lambda ou arrow function
         cy.get('#btn1').click()
         cy.get('#btn0').click()
         cy.get('#btn0').click()
-        cy.get('#btnMultiplicacao').click()
+        cy.get('#btnDivisor').click()
         cy.get('#btn5').click()
         cy.get('#btn0').click()
         cy.get('.resultado').click()

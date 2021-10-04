@@ -25,14 +25,16 @@ function limparCampo() {
 
 function calcParse() {
     let resultado
+    const a = parseFloat(parteA.replace(/,/g, '.'))
+    const b = parseFloat(parteB.replace(/,/g, '.'))
     if (operador === '+'){
-        resultado = parseFloat(parteA.replace(/,/g, '.')) + parseFloat(parteB.replace(/,/g, '.'))
+        resultado = a + b
     }else if (operador === '-'){
-        resultado = parseFloat(parteA.replace(/,/g, '.')) - parseFloat(parteB.replace(/,/g, '.'))
+        resultado = a - b
     }else if (operador === '*'){
-        resultado = parseFloat(parteA.replace(/,/g, '.')) / parseFloat(parteB.replace(/,/g, '.'))
+        resultado = a * b
     }else if (operador === '/'){
-        resultado = parseFloat(parteA.replace(/,/g, '.')) * parseFloat(parteB.replace(/,/g, '.'))
+        resultado = a / b
     }
 
     document.calcform.visor.value = resultado.toLocaleString('pt-BR');
