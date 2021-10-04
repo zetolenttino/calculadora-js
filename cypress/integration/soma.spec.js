@@ -8,6 +8,7 @@ describe('soma', () => { // lambda ou arrow function
         cy.get('.resultado').click()
         cy.get('#visor').should('have.value', '4')
     })
+    
     it('14+5', () => {
         cy.visit('http://127.0.0.1:5500/index.html')
         cy.contains('Calculadora')
