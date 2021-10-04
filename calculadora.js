@@ -9,7 +9,7 @@ function preencher(texto) {
             parteB = valor;
         else
             parteA = valor;
-    } else if (texto === '+' || operador === '-' || operador === '*' || operador === '/') {
+    } else if (texto === '+' || texto === '-' || texto === '*' || texto === '/') {
         operador = texto
         document.calcform.visor.value = ''
         }
@@ -29,9 +29,9 @@ function calcParse() {
         resultado = parseFloat(parteA.replace(/,/g, '.')) + parseFloat(parteB.replace(/,/g, '.'))
     }else if (operador === '-'){
         resultado = parseFloat(parteA.replace(/,/g, '.')) - parseFloat(parteB.replace(/,/g, '.'))
-    }else if (operador === '/'){
-        resultado = parseFloat(parteA.replace(/,/g, '.')) / parseFloat(parteB.replace(/,/g, '.'))
     }else if (operador === '*'){
+        resultado = parseFloat(parteA.replace(/,/g, '.')) / parseFloat(parteB.replace(/,/g, '.'))
+    }else if (operador === '/'){
         resultado = parseFloat(parteA.replace(/,/g, '.')) * parseFloat(parteB.replace(/,/g, '.'))
     }
 

@@ -1,4 +1,4 @@
-describe('limpar', () => { // lambda ou arrow function
+describe.skip('limpar', () => { // lambda ou arrow function
     it('3+1 AC 14+5', () => {
         cy.visit('http://127.0.0.1:5500/index.html')
         cy.contains('Calculadora')
@@ -16,5 +16,72 @@ describe('limpar', () => { // lambda ou arrow function
         cy.get('#btn5').click()
         cy.get('.resultado').click()
         cy.get('#visor').should('have.value', '19')
+    })
+
+    it('2-2 AC 20-5', () => {
+        cy.visit('http://127.0.0.1:5500/index.html')
+        cy.contains('Calculadora')
+        cy.get('#btn2').click()
+        cy.get('#btnMenos').click()
+        cy.get('#btn2').click()
+        cy.get('.resultado').click()
+        cy.get('#visor').should('have.value', '0')
+
+        cy.get('#btnAC').click()
+    
+        cy.visit('http://127.0.0.1:5500/index.html')
+        cy.contains('Calculadora')
+        cy.get('#btn2').click()
+        cy.get('#btn0').click()
+        cy.get('#btnMenos').click()
+        cy.get('#btn5').click()
+        cy.get('.resultado').click()
+        cy.get('#visor').should('have.value', '15')
+        
+    })
+    it('9*9 AC 10*10', () => {
+        cy.visit('http://127.0.0.1:5500/index.html')
+        cy.contains('Calculadora')
+        cy.get('#btn9').click()
+        cy.get('#btnMultiplicacao').click()
+        cy.get('#btn9').click()
+        cy.get('.resultado').click()
+        cy.get('#visor').should('have.value', '81')
+
+        cy.get('#btnAC').click()
+
+        cy.visit('http://127.0.0.1:5500/index.html')
+        cy.contains('Calculadora')
+        cy.get('#btn1').click()
+        cy.get('#btn0').click()
+        cy.get('#btnMultiplicacao').click()
+        cy.get('#btn1').click()
+        cy.get('#btn0').click()
+        cy.get('.resultado').click()
+        cy.get('#visor').should('have.value', '100')
+    })
+
+    it('40/4 AC 100/50', () => {
+        cy.visit('http://127.0.0.1:5500/index.html')
+        cy.contains('Calculadora')
+        cy.get('#btn4').click()
+        cy.get('#btn0').click()
+        cy.get('#btnDivisor').click()
+        cy.get('#btn4').click()
+        cy.get('.resultado').click()
+        cy.get('#visor').should('have.value', '10')
+
+        cy.get('#btnAC').click()
+
+        cy.visit('http://127.0.0.1:5500/index.html')
+        cy.contains('Calculadora')
+        cy.get('#btn1').click()
+        cy.get('#btn0').click()
+        cy.get('#btn0').click()
+        cy.get('#btnMultiplicacao').click()
+        cy.get('#btn5').click()
+        cy.get('#btn0').click()
+        cy.get('.resultado').click()
+        cy.get('#visor').should('have.value', '2')
     })
 })
